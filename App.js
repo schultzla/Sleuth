@@ -17,8 +17,64 @@ export default class App extends Component {
       authorError: null,
       error: false
     };
-
+    this.messageInput = React.createRef();
+    this.authorInput = React.createRef();
     this.getMessages = this.getMessages.bind(this);
+  }
+
+  render() {
+    return (
+      <View
+        style={{ flex: 1, alignItems: "center", backgroundColor: "#282c34" }}
+      >
+        <FontAwesomeIcon style={{ marginTop: '10%' }} size={70} color={'#FFC106'} icon={faUserSecret} />
+
+        <TextInput
+          style={{ color: "#ffffff", marginTop: 20, padding: 5, height: 40, width: '85%', textAlign: "left", borderRadius: 5 }}
+          backgroundColor="#333940"
+          placeholderTextColor="#6C757D"
+          placeholder="Username (Optional)"
+          selectionColor="#FFC106"
+          onChangeText={(author) => { this.updateAuthor(author) }}
+          ref={this.authorInput}
+          enablesReturnKeyAutomatically={true}
+          keyboardAppearance='dark'
+        />
+
+        <TextInput
+          style={{ color: "#ffffff", padding: 5, width: '85%', textAlign: "left", borderRadius: 5, marginVertical: 10, height: 150 }}
+          multiline={true}
+          placeholderTextColor="#6C757D"
+          backgroundColor="#333940"
+          placeholder="Message"
+          selectionColor="#FFC106"
+          onChangeText={(message) => { this.updateMessage(message) }}
+          ref={this.messageInput}
+          enablesReturnKeyAutomatically={true}
+          keyboardAppearance='dark'
+          maxLength={140}
+        />
+
+        <TouchableOpacity
+          style={styles.button}
+          onPress={this.addMessage}
+        >
+          <Text> Submit </Text>
+        </TouchableOpacity>
+
+        <FlatList
+          data={this.state.messages}
+          renderItem={({ item }) => <Item item={item} />}
+          keyExtractor={item => item._id}
+          style={{ width: '85%' }}
+          showsVerticalScrollIndicator={false}
+        >
+        </FlatList>
+
+        <DropdownAlert ref={ref => this.dropDownAlertRef = ref} />
+
+      </View>
+    );
   }
 
   validateAuthor = () => {
@@ -54,7 +110,7 @@ export default class App extends Component {
     const { message } = this.state;
     if (message.match('(?!^ +$)^.+$') == null) {
       this.setState({
-        messageError: "Message is empty",
+        messageError: "Message contains illegal spaces",
         error: true
       },
         function () {
@@ -82,7 +138,7 @@ export default class App extends Component {
     }
   }
 
-  addMessage = event => {
+  addMessage = () => {
     Keyboard.dismiss();
     var valMsg = this.validateMessage();
     var valAuth = this.validateAuthor();
@@ -103,8 +159,8 @@ export default class App extends Component {
           this.setState({ messages: [result, ...this.state.messages] })
         })
         .catch(error => console.log(error))
-      this.inputMessage.clear();
-      this.inputAuthor.clear();
+      this.messageInput.current.clear();
+      this.authorInput.current.clear();
       this.setState({
         message: "",
         author: "",
@@ -149,57 +205,6 @@ export default class App extends Component {
   componentDidMount = () => {
     this.getMessages();
     setInterval(this.getMessages, 5000)
-  }
-
-  render() {
-    return (
-      <View
-        style={{ flex: 1, alignItems: "center", backgroundColor: "#282c34" }}
-      >
-        <FontAwesomeIcon style={{ marginTop: '10%' }} size={70} color={'#FFC106'} icon={faUserSecret} />
-
-        <TextInput
-          style={{ marginTop: 20, padding: 5, height: 40, width: '85%', textAlign: "left", borderRadius: 5 }}
-          backgroundColor="#333940"
-          placeholderTextColor="#6C757D"
-          placeholder="Username (Optional)"
-          selectionColor="#FFC106"
-          onChangeText={(author) => { this.updateAuthor(author) }}
-          ref={el => this.inputAuthor = el}
-        />
-
-        <TextInput
-          style={{ color: "#ffffff", padding: 5, width: '85%', textAlign: "left", borderRadius: 5, marginVertical: 10, height: 150 }}
-          multiline={true}
-          placeholderTextColor="#6C757D"
-          backgroundColor="#333940"
-          placeholder="Message"
-          selectionColor="#FFC106"
-          onChangeText={(message) => { this.updateMessage(message) }}
-          ref={el => {this.inputMessage = el}}
-
-        />
-
-        <TouchableOpacity
-          style={styles.button}
-          onPress={this.addMessage}
-        >
-          <Text> Submit </Text>
-        </TouchableOpacity>
-
-        <FlatList
-          data={this.state.messages}
-          renderItem={({ item }) => <Item item={item} />}
-          keyExtractor={item => item._id}
-          style={{ width: '85%' }}
-          showsVerticalScrollIndicator={false}
-        >
-        </FlatList>
-
-        <DropdownAlert ref={ref => this.dropDownAlertRef = ref} />
-
-      </View>
-    );
   }
 }
 
