@@ -11,13 +11,17 @@ import DropdownAlert from 'react-native-dropdownalert';
 library.add(faUserSecret, faPlusCircle, faComments)
 
 export default class App extends Component {
+  state = {
+    activeTab: 'feed'
+  }
+  
   tabs = [
     {
       key: 'feed',
       icon: 'comments',
       label: 'Feed',
       barColor: '#282c34',
-      pressColor: 'rgba(255, 255, 255, 0.16)'
+      pressColor: 'rgba(255, 255, 255, 0.16)'    
     },
     {
       key: 'post',
@@ -27,10 +31,6 @@ export default class App extends Component {
       pressColor: 'rgba(255, 255, 255, 0.16)'
     }
   ]
-
-  state = {
-    activeTab: 'feed'
-  }
 
   handleTabPress = (newTab, oldTab) => {
     this.setState({ activeTab: newTab.key })
@@ -48,7 +48,11 @@ export default class App extends Component {
   }
 
   renderIcon = iconName => ({ isActive }) => {
-    return <FontAwesomeIcon size={24} color="#ffffff" icon={iconName} />
+    if (isActive) {
+      return <FontAwesomeIcon size={24} color="#FFC106" icon={iconName} />
+    } else {
+      return <FontAwesomeIcon size={24} color="#ffffff" icon={iconName} />
+    }
   }
 
   render() {
