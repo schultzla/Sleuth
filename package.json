@@ -20,8 +20,7 @@
     "react-native-dropdownalert": "^4.2.1",
     "react-native-fontawesome": "^7.0.0",
     "react-native-material-bottom-navigation": "^1.0.5",
-    "react-native-svg": "^11.0.1",
-    "react-native-vector-icons": "^6.6.0"
+    "react-native-svg": "^11.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",

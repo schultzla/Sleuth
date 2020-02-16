@@ -3,6 +3,8 @@ import { Text, View, StyleSheet, FlatList } from 'react-native';
 import moment from 'moment';
 
 export default class Messages extends Component {
+  _isMounted = false;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -29,25 +31,33 @@ export default class Messages extends Component {
   }
 
   async getMessages() {
-    try {
-      const allMessages = [];
-      await fetch('https://anon.logamos.pw/api/v1/messages')
-        .then((response) => response.json())
-        .then((responseJson) => {
-          allMessages.push(...responseJson);
-          allMessages.sort((a, b) => (a.time > b.time ? 1 : -1));
+    if (this._isMounted) {
+      try {
+        const allMessages = [];
+        await fetch('https://anon.logamos.pw/api/v1/messages')
+          .then((response) => response.json())
+          .then((responseJson) => {
+            allMessages.push(...responseJson);
+            allMessages.sort((a, b) => (a.time > b.time ? 1 : -1));
+          })
+        this.setState({
+          messages: allMessages
         })
-      this.setState({
-        messages: allMessages
-      })
-    } catch (e) {
-      console.log(e);
+      } catch (e) {
+        console.log(e);
+      }
+  
     }
   }
 
   componentDidMount = () => {
+    this._isMounted = true;
     this.getMessages();
     setInterval(this.getMessages, 5000)
+  }
+
+  componentWillUnmount = () => {
+    this._isMounted = false;
   }
 }
 
