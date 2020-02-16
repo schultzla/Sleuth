@@ -28,7 +28,9 @@ export default class App extends Component {
         authorError: author.length > 0 ? "Author must be 3 characters" : null
       },
         function () {
-          this.dropDownAlertRef.alertWithType('error', 'Error', this.state.authorError);
+          if (author.length > 0) {
+            this.dropDownAlertRef.alertWithType('error', 'Error', this.state.authorError);
+          }
         })
     } else {
       this.setState({
@@ -64,7 +66,13 @@ export default class App extends Component {
       this.setState({
         messageError: message.length <= 0 ? (message.length > 140 ? 'Message must be less than 140 characters' : 'Message is empty') : null,
         error: message.length <= 0 ? (message.length > 140 ? true : true) : false
-      })
+      },
+      function () {
+        if (message.length > 140) {
+          this.dropDownAlertRef.alertWithType('error', 'Error', this.state.messageError);
+        }
+      }
+    );
     }
 
     if (message.length > 0 && message.length < 140) {
@@ -95,8 +103,8 @@ export default class App extends Component {
           this.setState({ messages: [result, ...this.state.messages] })
         })
         .catch(error => console.log(error))
-      this.message = ""
-      this.author = ""
+      this.inputMessage.clear();
+      this.inputAuthor.clear();
       this.setState({
         message: "",
         author: "",
@@ -157,6 +165,7 @@ export default class App extends Component {
           placeholder="Username (Optional)"
           selectionColor="#FFC106"
           onChangeText={(author) => { this.updateAuthor(author) }}
+          ref={el => this.inputAuthor = el}
         />
 
         <TextInput
@@ -167,6 +176,7 @@ export default class App extends Component {
           placeholder="Message"
           selectionColor="#FFC106"
           onChangeText={(message) => { this.updateMessage(message) }}
+          ref={el => {this.inputMessage = el}}
 
         />
 
