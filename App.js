@@ -14,14 +14,14 @@ export default class App extends Component {
   state = {
     activeTab: 'feed'
   }
-  
+
   tabs = [
     {
       key: 'feed',
       icon: 'comments',
       label: 'Feed',
       barColor: '#282c34',
-      pressColor: 'rgba(255, 255, 255, 0.16)'    
+      pressColor: 'rgba(255, 255, 255, 0.16)'
     },
     {
       key: 'post',
