@@ -138,8 +138,12 @@ export default class Submission extends Component {
         .then(data => data.json())
         .then(result => {
           this.setState({ messages: [result, ...this.state.messages] })
+          this.props.dropdown.alertWithType('success', 'Posted', "Message posted!");
         })
-        .catch(error => console.log(error))
+        .catch(error => {
+          console.log(error)
+          this.props.dropdown.alertWithType('error', 'Error', error);
+        })
       this.messageInput.current.clear();
       this.authorInput.current.clear();
       this.setState({
