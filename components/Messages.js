@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TouchableOpacity, Text, View, StyleSheet, FlatList, Button, TouchableWithoutFeedback, Modal } from 'react-native';
+import { Dimmensions, TouchableOpacity, Text, View, StyleSheet, FlatList, Button, TouchableWithoutFeedback, Modal, Dimensions } from 'react-native';
 import moment from 'moment';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 
@@ -22,7 +22,7 @@ export default class Messages extends Component {
 
         <FlatList
           data={this.state.messages}
-          renderItem={({ item }) => <Item item={item} modal={this.props.modal.current} />}
+          renderItem={({ item }) => <Item item={item} />}
           keyExtractor={item => item._id}
           style={{ width: '85%', marginTop: '5%' }}
           showsVerticalScrollIndicator={false}
@@ -115,9 +115,9 @@ const styles = StyleSheet.create({
   },
 })
 
-function Item({ item, modal }) {
+function Item({ list, item }) {
   return (
-    <TouchableOpacity activeOpacity={.7} onPress={() => modal.open()}>
+    <TouchableOpacity activeOpacity={.7}>
       <View style={styles.card}>
         <Text
           style={{
