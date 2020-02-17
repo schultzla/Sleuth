@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Animated } from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPlusCircle, faUserSecret, faComments } from '@fortawesome/free-solid-svg-icons'
@@ -11,8 +11,14 @@ import DropdownAlert from 'react-native-dropdownalert';
 library.add(faUserSecret, faPlusCircle, faComments)
 
 export default class App extends Component {
-  state = {
-    activeTab: 'feed'
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeTab: 'feed'
+    }
+
+    this.panelRef = React.createRef();
   }
 
   tabs = [
@@ -55,11 +61,19 @@ export default class App extends Component {
     }
   }
 
+  _draggedValue = new Animated.Value(0);
+
   render() {
     return (
       <View style={styles.view}>
         <Header viewStyle={styles.view} />
-        <ActiveMenu dropdown={this.dropDownAlertRef} viewStyle={styles.view} active={this.state.activeTab} />
+
+        <ActiveMenu
+          dropdown={this.dropDownAlertRef}
+          viewStyle={styles.view}
+          active={this.state.activeTab}/>
+
+
         <BottomNavigation
           renderTab={this.renderTab}
           activeTab={this.state.activeTab}

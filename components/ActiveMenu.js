@@ -4,6 +4,9 @@ import Messages from './Messages'
 
 export default class ActiveMenu extends Component {
 
+  constructor(props) {
+    super(props)
+  }
 
   render() {
     if (this.props.active === 'feed') {

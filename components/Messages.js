@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, FlatList } from 'react-native';
+import { Dimensions, Text, View, StyleSheet, FlatList, Button, TouchableWithoutFeedback } from 'react-native';
 import moment from 'moment';
 
 export default class Messages extends Component {
@@ -8,7 +8,8 @@ export default class Messages extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      messages: []
+      messages: [],
+      refreshing: false
     };
 
     this.getMessages = this.getMessages.bind(this);
@@ -23,16 +24,35 @@ export default class Messages extends Component {
           keyExtractor={item => item._id}
           style={{ width: '85%', marginTop: '5%' }}
           showsVerticalScrollIndicator={false}
+          refreshing={this.state.refreshing}
+          onRefresh={this.getMessages}
         >
         </FlatList>
-
       </View>
     );
   }
 
+  capMessages() {
+    if (this.state.messages.length > 25) {
+      var extras = this.state.messages.splice(25, this.state.messages.length - 1);
+      extras.map(val => {
+        return fetch('/api/v1/messages/' + val._id, {
+          method: 'DELETE'
+        })
+          .then(data => data.json())
+          .catch(error => console.log(error))
+      })
+
+    }
+  }
+
   async getMessages() {
     if (this._isMounted) {
+      this.capMessages();
       try {
+        this.setState({
+          refreshing: true
+        })
         const allMessages = [];
         await fetch('https://anon.logamos.pw/api/v1/messages')
           .then((response) => response.json())
@@ -41,19 +61,22 @@ export default class Messages extends Component {
             allMessages.sort((a, b) => (a.time > b.time ? 1 : -1));
           })
         this.setState({
-          messages: allMessages
+          messages: allMessages,
+          refreshing: false
         })
       } catch (e) {
         console.log(e);
+        this.setState({
+          refreshing: false
+        })
       }
-  
+
     }
   }
 
   componentDidMount = () => {
     this._isMounted = true;
     this.getMessages();
-    setInterval(this.getMessages, 5000)
   }
 
   componentWillUnmount = () => {
@@ -73,10 +96,12 @@ const styles = StyleSheet.create({
 
 function Item({ item }) {
   return (
-    <View style={styles.card}>
-      <Text style={{ color: "#ffffff", textAlign: 'center', padding: 10 }}>{item.message}</Text>
-      <Text style={{ color: "#6C757D", textAlign: 'center' }}>{this.date(item.date)} from {item.author}</Text>
-    </View>
+    <TouchableWithoutFeedback >
+      <View style={styles.card}>
+        <Text style={{ color: "#ffffff", textAlign: 'center', padding: 10 }}>{item.message}</Text>
+        <Text style={{ color: "#6C757D", textAlign: 'center' }}>{this.date(item.date)} from {item.author}</Text>
+      </View>
+    </TouchableWithoutFeedback>
   );
 }
 
