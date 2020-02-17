@@ -7,6 +7,7 @@ import Header from './components/Header';
 import BottomNavigation, { FullTab } from 'react-native-material-bottom-navigation'
 import ActiveMenu from './components/ActiveMenu';
 import DropdownAlert from 'react-native-dropdownalert';
+import { Modalize } from 'react-native-modalize';
 
 library.add(faUserSecret, faEdit, faComments, faComment)
 
@@ -19,6 +20,7 @@ export default class App extends Component {
     }
 
     this.panelRef = React.createRef();
+    this.modalRef = React.createRef();
   }
 
   tabs = [
@@ -71,8 +73,14 @@ export default class App extends Component {
         <ActiveMenu
           dropdown={this.dropDownAlertRef}
           viewStyle={styles.view}
-          active={this.state.activeTab}/>
-
+          active={this.state.activeTab}
+          modal={this.modalRef}/>
+        
+        <Modalize ref={this.modalRef}>
+          <View>
+            
+          </View>
+        </Modalize>
 
         <BottomNavigation
           renderTab={this.renderTab}

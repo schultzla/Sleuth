@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dimensions, Text, View, StyleSheet, FlatList, Button, TouchableWithoutFeedback } from 'react-native';
+import { TouchableOpacity, Text, View, StyleSheet, FlatList, Button, TouchableWithoutFeedback, Modal } from 'react-native';
 import moment from 'moment';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 
@@ -12,16 +12,17 @@ export default class Messages extends Component {
       messages: [],
       refreshing: false
     };
-
+    
     this.getMessages = this.getMessages.bind(this);
   }
 
   render() {
     return (
       <View style={this.props.viewStyle}>
+
         <FlatList
           data={this.state.messages}
-          renderItem={({ item }) => <Item item={item} />}
+          renderItem={({ item }) => <Item item={item} modal={this.props.modal.current} />}
           keyExtractor={item => item._id}
           style={{ width: '85%', marginTop: '5%' }}
           showsVerticalScrollIndicator={false}
@@ -77,7 +78,16 @@ const styles = StyleSheet.create({
     width: "100%",
     padding: 10,
     marginBottom: 10,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+
+    elevation: 3,
   },
   row: {
     flexDirection: 'row'
@@ -105,9 +115,9 @@ const styles = StyleSheet.create({
   },
 })
 
-function Item({ item }) {
+function Item({ item, modal }) {
   return (
-    <TouchableWithoutFeedback >
+    <TouchableOpacity activeOpacity={.7} onPress={() => modal.open()}>
       <View style={styles.card}>
         <Text
           style={{
@@ -135,7 +145,7 @@ function Item({ item }) {
           </View>
         </View>
       </View>
-    </TouchableWithoutFeedback>
+    </TouchableOpacity>
   );
 }
 

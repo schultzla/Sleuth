@@ -11,7 +11,7 @@ export default class ActiveMenu extends Component {
   render() {
     if (this.props.active === 'feed') {
       return (
-        <Messages viewStyle={this.props.viewStyle} />
+        <Messages fetch={this.props.fetch} modal={this.props.modal} viewStyle={this.props.viewStyle} />
       );
     } else if (this.props.active === 'post') {
       return (
