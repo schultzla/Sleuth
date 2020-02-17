@@ -1,4 +1,4 @@
-# AnonyMobile
+# Sleuth
 
 React Native app version of AnonyBoard
 

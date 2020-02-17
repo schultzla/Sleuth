@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Animated } from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faPlusCircle, faUserSecret, faComments } from '@fortawesome/free-solid-svg-icons'
+import { faEdit, faUserSecret, faComments, faComment } from '@fortawesome/free-solid-svg-icons'
 import Header from './components/Header';
 import BottomNavigation, { FullTab } from 'react-native-material-bottom-navigation'
 import ActiveMenu from './components/ActiveMenu';
 import DropdownAlert from 'react-native-dropdownalert';
 
-library.add(faUserSecret, faPlusCircle, faComments)
+library.add(faUserSecret, faEdit, faComments, faComment)
 
 export default class App extends Component {
 
@@ -31,7 +31,7 @@ export default class App extends Component {
     },
     {
       key: 'post',
-      icon: 'plus-circle',
+      icon: 'edit',
       label: 'Post',
       barColor: '#282c34',
       pressColor: 'rgba(255, 255, 255, 0.16)'

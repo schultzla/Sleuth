@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Dimensions, Text, View, StyleSheet, FlatList, Button, TouchableWithoutFeedback } from 'react-native';
 import moment from 'moment';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 
 export default class Messages extends Component {
   _isMounted = false;
@@ -32,23 +33,8 @@ export default class Messages extends Component {
     );
   }
 
-  capMessages() {
-    if (this.state.messages.length > 25) {
-      var extras = this.state.messages.splice(25, this.state.messages.length - 1);
-      extras.map(val => {
-        return fetch('/api/v1/messages/' + val._id, {
-          method: 'DELETE'
-        })
-          .then(data => data.json())
-          .catch(error => console.log(error))
-      })
-
-    }
-  }
-
   async getMessages() {
     if (this._isMounted) {
-      this.capMessages();
       try {
         this.setState({
           refreshing: true
@@ -88,18 +74,66 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: '#333940',
     borderRadius: 5,
-    padding: 20,
     width: "100%",
-    marginBottom: 10
-  }
+    padding: 10,
+    marginBottom: 10,
+    justifyContent: 'space-between'
+  },
+  row: {
+    flexDirection: 'row'
+  },
+  date: {
+    color: '#6C757D',
+  },
+  replies: {
+    color: '#6C757D',
+  },
+  leftContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'flex-start'
+  },
+  centerContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  rightContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'flex-end'
+  },
 })
 
 function Item({ item }) {
   return (
     <TouchableWithoutFeedback >
       <View style={styles.card}>
-        <Text style={{ color: "#ffffff", textAlign: 'center', padding: 10 }}>{item.message}</Text>
-        <Text style={{ color: "#6C757D", textAlign: 'center' }}>{this.date(item.date)} from {item.author}</Text>
+        <Text
+          style={{
+            color:"#6c757d"
+          }}>
+          {item.author}
+        </Text>
+        <Text
+          style={{
+            color: "#ffffff",
+            marginTop: 5,
+            marginBottom: 5
+          }}>
+          {item.message}
+        </Text>
+        <View style={styles.row}>
+          <View style={styles.leftContainer}>
+            <Text style={styles.date}>{this.date(item.date)}</Text>
+          </View>
+          <View style={styles.rightContainer}>
+            <View style={styles.row}>
+              <FontAwesomeIcon style={{marginRight: 5}} color='#6c757d' icon='comment'/>
+              <Text style={styles.replies}>{item.replies.length} {item.replies.length != 1 ? 'replies' : 'reply'}</Text>
+            </View>
+          </View>
+        </View>
       </View>
     </TouchableWithoutFeedback>
   );
