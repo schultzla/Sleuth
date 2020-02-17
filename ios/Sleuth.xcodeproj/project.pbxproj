@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* AnonyMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AnonyMobileTests.m */; };
-		0D1B65B68947B552612A75C6 /* libPods-AnonyMobile-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B91BA36316DA11697D7BB05D /* libPods-AnonyMobile-tvOS.a */; };
+		00E356F31AD99517003FC87E /* SleuthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SleuthTests.m */; };
+		0D1B65B68947B552612A75C6 /* libPods-Sleuth-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B91BA36316DA11697D7BB05D /* libPods-Sleuth-tvOS.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -16,10 +16,10 @@
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* AnonyMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AnonyMobileTests.m */; };
-		51AE6E0816917D14E2F588C3 /* libPods-AnonyMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18EF0923CF24A05EF27B66F0 /* libPods-AnonyMobile.a */; };
-		639401567174902C379EC9CD /* libPods-AnonyMobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 592E5E98CBF82AA2B463A31F /* libPods-AnonyMobileTests.a */; };
-		68FF8CFDBB5AF8FC689ADA40 /* libPods-AnonyMobile-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B05C55D5D8EDB534710DC82 /* libPods-AnonyMobile-tvOSTests.a */; };
+		2DCD954D1E0B4F2C00145EB5 /* SleuthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SleuthTests.m */; };
+		51AE6E0816917D14E2F588C3 /* libPods-Sleuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18EF0923CF24A05EF27B66F0 /* libPods-Sleuth.a */; };
+		639401567174902C379EC9CD /* libPods-SleuthTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 592E5E98CBF82AA2B463A31F /* libPods-SleuthTests.a */; };
+		68FF8CFDBB5AF8FC689ADA40 /* libPods-Sleuth-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B05C55D5D8EDB534710DC82 /* libPods-Sleuth-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,43 +28,43 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = AnonyMobile;
+			remoteInfo = Sleuth;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "AnonyMobile-tvOS";
+			remoteInfo = "Sleuth-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* AnonyMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnonyMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* SleuthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SleuthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* AnonyMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnonyMobileTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* AnonyMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnonyMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AnonyMobile/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = AnonyMobile/AppDelegate.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* SleuthTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SleuthTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* Sleuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sleuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Sleuth/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Sleuth/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AnonyMobile/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AnonyMobile/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AnonyMobile/main.m; sourceTree = "<group>"; };
-		18EF0923CF24A05EF27B66F0 /* libPods-AnonyMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnonyMobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E47B1E0B4A5D006451C7 /* AnonyMobile-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnonyMobile-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* AnonyMobile-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AnonyMobile-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EDB19625F4C4C98FAFA7E6F /* Pods-AnonyMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnonyMobile.debug.xcconfig"; path = "Target Support Files/Pods-AnonyMobile/Pods-AnonyMobile.debug.xcconfig"; sourceTree = "<group>"; };
-		592E5E98CBF82AA2B463A31F /* libPods-AnonyMobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnonyMobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B05C55D5D8EDB534710DC82 /* libPods-AnonyMobile-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnonyMobile-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AF0268439421420AFEB8D32 /* Pods-AnonyMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnonyMobile.release.xcconfig"; path = "Target Support Files/Pods-AnonyMobile/Pods-AnonyMobile.release.xcconfig"; sourceTree = "<group>"; };
-		6C5095A347AF9F12DF0DDBF8 /* Pods-AnonyMobile-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnonyMobile-tvOS.release.xcconfig"; path = "Target Support Files/Pods-AnonyMobile-tvOS/Pods-AnonyMobile-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		6EB8435D4F2F4C25DFF33704 /* Pods-AnonyMobile-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnonyMobile-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-AnonyMobile-tvOSTests/Pods-AnonyMobile-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		7431FC92D6AB06A12BA39DA5 /* Pods-AnonyMobile-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnonyMobile-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-AnonyMobile-tvOS/Pods-AnonyMobile-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		ACFAFAEE81F57392E40BA32E /* Pods-AnonyMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnonyMobileTests.release.xcconfig"; path = "Target Support Files/Pods-AnonyMobileTests/Pods-AnonyMobileTests.release.xcconfig"; sourceTree = "<group>"; };
-		B91BA36316DA11697D7BB05D /* libPods-AnonyMobile-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnonyMobile-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D16A4E3F0B405D2069F9DA9B /* Pods-AnonyMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnonyMobileTests.debug.xcconfig"; path = "Target Support Files/Pods-AnonyMobileTests/Pods-AnonyMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D18013BC2FD0C455480748C6 /* Pods-AnonyMobile-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnonyMobile-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-AnonyMobile-tvOSTests/Pods-AnonyMobile-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Sleuth/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sleuth/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Sleuth/main.m; sourceTree = "<group>"; };
+		18EF0923CF24A05EF27B66F0 /* libPods-Sleuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sleuth.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E47B1E0B4A5D006451C7 /* Sleuth-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sleuth-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* Sleuth-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sleuth-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EDB19625F4C4C98FAFA7E6F /* Pods-Sleuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleuth.debug.xcconfig"; path = "Target Support Files/Pods-Sleuth/Pods-Sleuth.debug.xcconfig"; sourceTree = "<group>"; };
+		592E5E98CBF82AA2B463A31F /* libPods-SleuthTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SleuthTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B05C55D5D8EDB534710DC82 /* libPods-Sleuth-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sleuth-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AF0268439421420AFEB8D32 /* Pods-Sleuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleuth.release.xcconfig"; path = "Target Support Files/Pods-Sleuth/Pods-Sleuth.release.xcconfig"; sourceTree = "<group>"; };
+		6C5095A347AF9F12DF0DDBF8 /* Pods-Sleuth-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleuth-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Sleuth-tvOS/Pods-Sleuth-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		6EB8435D4F2F4C25DFF33704 /* Pods-Sleuth-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleuth-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Sleuth-tvOSTests/Pods-Sleuth-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		7431FC92D6AB06A12BA39DA5 /* Pods-Sleuth-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleuth-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Sleuth-tvOS/Pods-Sleuth-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		ACFAFAEE81F57392E40BA32E /* Pods-SleuthTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleuthTests.release.xcconfig"; path = "Target Support Files/Pods-SleuthTests/Pods-SleuthTests.release.xcconfig"; sourceTree = "<group>"; };
+		B91BA36316DA11697D7BB05D /* libPods-Sleuth-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sleuth-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D16A4E3F0B405D2069F9DA9B /* Pods-SleuthTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleuthTests.debug.xcconfig"; path = "Target Support Files/Pods-SleuthTests/Pods-SleuthTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D18013BC2FD0C455480748C6 /* Pods-Sleuth-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleuth-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Sleuth-tvOSTests/Pods-Sleuth-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				639401567174902C379EC9CD /* libPods-AnonyMobileTests.a in Frameworks */,
+				639401567174902C379EC9CD /* libPods-SleuthTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51AE6E0816917D14E2F588C3 /* libPods-AnonyMobile.a in Frameworks */,
+				51AE6E0816917D14E2F588C3 /* libPods-Sleuth.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D1B65B68947B552612A75C6 /* libPods-AnonyMobile-tvOS.a in Frameworks */,
+				0D1B65B68947B552612A75C6 /* libPods-Sleuth-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,20 +98,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68FF8CFDBB5AF8FC689ADA40 /* libPods-AnonyMobile-tvOSTests.a in Frameworks */,
+				68FF8CFDBB5AF8FC689ADA40 /* libPods-Sleuth-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* AnonyMobileTests */ = {
+		00E356EF1AD99517003FC87E /* SleuthTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* AnonyMobileTests.m */,
+				00E356F21AD99517003FC87E /* SleuthTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = AnonyMobileTests;
+			path = SleuthTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -122,7 +122,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* AnonyMobile */ = {
+		13B07FAE1A68108700A75B9A /* Sleuth */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -133,7 +133,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = AnonyMobile;
+			name = Sleuth;
 			sourceTree = "<group>";
 		};
 		1C22B58BC31D44AEAD0796DD /* Resources */ = {
@@ -141,7 +141,6 @@
 			children = (
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -149,10 +148,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				18EF0923CF24A05EF27B66F0 /* libPods-AnonyMobile.a */,
-				B91BA36316DA11697D7BB05D /* libPods-AnonyMobile-tvOS.a */,
-				5B05C55D5D8EDB534710DC82 /* libPods-AnonyMobile-tvOSTests.a */,
-				592E5E98CBF82AA2B463A31F /* libPods-AnonyMobileTests.a */,
+				18EF0923CF24A05EF27B66F0 /* libPods-Sleuth.a */,
+				B91BA36316DA11697D7BB05D /* libPods-Sleuth-tvOS.a */,
+				5B05C55D5D8EDB534710DC82 /* libPods-Sleuth-tvOSTests.a */,
+				592E5E98CBF82AA2B463A31F /* libPods-SleuthTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -160,16 +159,15 @@
 		32628EFC5FEC77468F4A4E56 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2EDB19625F4C4C98FAFA7E6F /* Pods-AnonyMobile.debug.xcconfig */,
-				6AF0268439421420AFEB8D32 /* Pods-AnonyMobile.release.xcconfig */,
-				7431FC92D6AB06A12BA39DA5 /* Pods-AnonyMobile-tvOS.debug.xcconfig */,
-				6C5095A347AF9F12DF0DDBF8 /* Pods-AnonyMobile-tvOS.release.xcconfig */,
-				D18013BC2FD0C455480748C6 /* Pods-AnonyMobile-tvOSTests.debug.xcconfig */,
-				6EB8435D4F2F4C25DFF33704 /* Pods-AnonyMobile-tvOSTests.release.xcconfig */,
-				D16A4E3F0B405D2069F9DA9B /* Pods-AnonyMobileTests.debug.xcconfig */,
-				ACFAFAEE81F57392E40BA32E /* Pods-AnonyMobileTests.release.xcconfig */,
+				2EDB19625F4C4C98FAFA7E6F /* Pods-Sleuth.debug.xcconfig */,
+				6AF0268439421420AFEB8D32 /* Pods-Sleuth.release.xcconfig */,
+				7431FC92D6AB06A12BA39DA5 /* Pods-Sleuth-tvOS.debug.xcconfig */,
+				6C5095A347AF9F12DF0DDBF8 /* Pods-Sleuth-tvOS.release.xcconfig */,
+				D18013BC2FD0C455480748C6 /* Pods-Sleuth-tvOSTests.debug.xcconfig */,
+				6EB8435D4F2F4C25DFF33704 /* Pods-Sleuth-tvOSTests.release.xcconfig */,
+				D16A4E3F0B405D2069F9DA9B /* Pods-SleuthTests.debug.xcconfig */,
+				ACFAFAEE81F57392E40BA32E /* Pods-SleuthTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -183,9 +181,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* AnonyMobile */,
+				13B07FAE1A68108700A75B9A /* Sleuth */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* AnonyMobileTests */,
+				00E356EF1AD99517003FC87E /* SleuthTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				32628EFC5FEC77468F4A4E56 /* Pods */,
@@ -199,10 +197,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* AnonyMobile.app */,
-				00E356EE1AD99517003FC87E /* AnonyMobileTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* AnonyMobile-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* AnonyMobile-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* Sleuth.app */,
+				00E356EE1AD99517003FC87E /* SleuthTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* Sleuth-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* Sleuth-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -210,9 +208,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* AnonyMobileTests */ = {
+		00E356ED1AD99517003FC87E /* SleuthTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AnonyMobileTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "SleuthTests" */;
 			buildPhases = (
 				CC0435940C1A1C270648BDF6 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -224,14 +222,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = AnonyMobileTests;
-			productName = AnonyMobileTests;
-			productReference = 00E356EE1AD99517003FC87E /* AnonyMobileTests.xctest */;
+			name = SleuthTests;
+			productName = SleuthTests;
+			productReference = 00E356EE1AD99517003FC87E /* SleuthTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* AnonyMobile */ = {
+		13B07F861A680F5B00A75B9A /* Sleuth */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AnonyMobile" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Sleuth" */;
 			buildPhases = (
 				F91E5E1A786A13E1BEA74C56 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -244,14 +242,14 @@
 			);
 			dependencies = (
 			);
-			name = AnonyMobile;
-			productName = AnonyMobile;
-			productReference = 13B07F961A680F5B00A75B9A /* AnonyMobile.app */;
+			name = Sleuth;
+			productName = Sleuth;
+			productReference = 13B07F961A680F5B00A75B9A /* Sleuth.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* AnonyMobile-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* Sleuth-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AnonyMobile-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Sleuth-tvOS" */;
 			buildPhases = (
 				21FDE6D1E4F2CDA04E6D77A5 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -264,14 +262,14 @@
 			);
 			dependencies = (
 			);
-			name = "AnonyMobile-tvOS";
-			productName = "AnonyMobile-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* AnonyMobile-tvOS.app */;
+			name = "Sleuth-tvOS";
+			productName = "Sleuth-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* Sleuth-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* AnonyMobile-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* Sleuth-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AnonyMobile-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Sleuth-tvOSTests" */;
 			buildPhases = (
 				FDBF7D751915556DAB42BF2A /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -283,9 +281,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "AnonyMobile-tvOSTests";
-			productName = "AnonyMobile-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* AnonyMobile-tvOSTests.xctest */;
+			name = "Sleuth-tvOSTests";
+			productName = "Sleuth-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* Sleuth-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -301,6 +299,10 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = PCU5763FCG;
+						ProvisioningStyle = Automatic;
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -312,11 +314,12 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "AnonyMobile" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Sleuth" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -325,10 +328,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* AnonyMobile */,
-				00E356ED1AD99517003FC87E /* AnonyMobileTests */,
-				2D02E47A1E0B4A5D006451C7 /* AnonyMobile-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* AnonyMobile-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* Sleuth */,
+				00E356ED1AD99517003FC87E /* SleuthTests */,
+				2D02E47A1E0B4A5D006451C7 /* Sleuth-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* Sleuth-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -397,7 +400,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AnonyMobile-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Sleuth-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -433,7 +436,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AnonyMobileTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SleuthTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -455,7 +458,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AnonyMobile-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Sleuth-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -515,7 +518,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AnonyMobile-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Sleuth-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -529,7 +532,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* AnonyMobileTests.m in Sources */,
+				00E356F31AD99517003FC87E /* SleuthTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,7 +558,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* AnonyMobileTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* SleuthTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,12 +567,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* AnonyMobile */;
+			target = 13B07F861A680F5B00A75B9A /* Sleuth */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* AnonyMobile-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* Sleuth-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -581,7 +584,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = AnonyMobile;
+			path = Sleuth;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -589,14 +592,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D16A4E3F0B405D2069F9DA9B /* Pods-AnonyMobileTests.debug.xcconfig */;
+			baseConfigurationReference = D16A4E3F0B405D2069F9DA9B /* Pods-SleuthTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = AnonyMobileTests/Info.plist;
+				INFOPLIST_FILE = SleuthTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -606,17 +609,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnonyMobile.app/AnonyMobile";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sleuth.app/Sleuth";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACFAFAEE81F57392E40BA32E /* Pods-AnonyMobileTests.release.xcconfig */;
+			baseConfigurationReference = ACFAFAEE81F57392E40BA32E /* Pods-SleuthTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = AnonyMobileTests/Info.plist;
+				INFOPLIST_FILE = SleuthTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -626,52 +629,60 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnonyMobile.app/AnonyMobile";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sleuth.app/Sleuth";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2EDB19625F4C4C98FAFA7E6F /* Pods-AnonyMobile.debug.xcconfig */;
+			baseConfigurationReference = 2EDB19625F4C4C98FAFA7E6F /* Pods-Sleuth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				INFOPLIST_FILE = AnonyMobile/Info.plist;
+				DEVELOPMENT_TEAM = PCU5763FCG;
+				INFOPLIST_FILE = Sleuth/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = AnonyMobile;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Sleuth;
+				PRODUCT_NAME = Sleuth;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6AF0268439421420AFEB8D32 /* Pods-AnonyMobile.release.xcconfig */;
+			baseConfigurationReference = 6AF0268439421420AFEB8D32 /* Pods-Sleuth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = AnonyMobile/Info.plist;
+				DEVELOPMENT_TEAM = PCU5763FCG;
+				INFOPLIST_FILE = Sleuth/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = AnonyMobile;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Sleuth;
+				PRODUCT_NAME = Sleuth;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7431FC92D6AB06A12BA39DA5 /* Pods-AnonyMobile-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 7431FC92D6AB06A12BA39DA5 /* Pods-Sleuth-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -682,14 +693,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "AnonyMobile-tvOS/Info.plist";
+				INFOPLIST_FILE = "Sleuth-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.AnonyMobile-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Sleuth-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -699,7 +710,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C5095A347AF9F12DF0DDBF8 /* Pods-AnonyMobile-tvOS.release.xcconfig */;
+			baseConfigurationReference = 6C5095A347AF9F12DF0DDBF8 /* Pods-Sleuth-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -710,14 +721,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "AnonyMobile-tvOS/Info.plist";
+				INFOPLIST_FILE = "Sleuth-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.AnonyMobile-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Sleuth-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -727,7 +738,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D18013BC2FD0C455480748C6 /* Pods-AnonyMobile-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = D18013BC2FD0C455480748C6 /* Pods-Sleuth-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -737,24 +748,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "AnonyMobile-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "Sleuth-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.AnonyMobile-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Sleuth-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnonyMobile-tvOS.app/AnonyMobile-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sleuth-tvOS.app/Sleuth-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6EB8435D4F2F4C25DFF33704 /* Pods-AnonyMobile-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 6EB8435D4F2F4C25DFF33704 /* Pods-Sleuth-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -764,17 +775,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "AnonyMobile-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "Sleuth-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.AnonyMobile-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Sleuth-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnonyMobile-tvOS.app/AnonyMobile-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sleuth-tvOS.app/Sleuth-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -881,7 +892,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AnonyMobileTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "SleuthTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -890,7 +901,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AnonyMobile" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Sleuth" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -899,7 +910,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AnonyMobile-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Sleuth-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -908,7 +919,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AnonyMobile-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Sleuth-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -917,7 +928,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "AnonyMobile" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Sleuth" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

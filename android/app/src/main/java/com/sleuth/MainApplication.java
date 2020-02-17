@@ -1,4 +1,4 @@
-package com.anonymobile;
+package com.sleuth;
 
 import android.app.Application;
 import android.content.Context;
