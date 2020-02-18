@@ -3,6 +3,9 @@ import { Dimmensions, TouchableOpacity, Text, View, StyleSheet, FlatList, Button
 import moment from 'moment';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 
+var width = Dimensions.get('window').width;
+var height = Dimensions.get('window').height; 
+
 export default class Messages extends Component {
   _isMounted = false;
 
@@ -24,7 +27,7 @@ export default class Messages extends Component {
           data={this.state.messages}
           renderItem={({ item }) => <Item item={item} />}
           keyExtractor={item => item._id}
-          style={{ width: '85%', marginTop: '5%' }}
+          style={{ width: '100%', marginTop: '5%' }}
           showsVerticalScrollIndicator={false}
           refreshing={this.state.refreshing}
           onRefresh={this.getMessages}
@@ -75,10 +78,8 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: '#333940',
     borderRadius: 5,
-    width: "100%",
     padding: 10,
     marginBottom: 10,
-    justifyContent: 'space-between',
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -86,6 +87,8 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.22,
     shadowRadius: 2.22,
+    marginLeft: 10,
+    marginRight: 10,
 
     elevation: 3,
   },
