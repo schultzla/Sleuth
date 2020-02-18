@@ -1,12 +1,14 @@
 import React, { Component } from "react";
-import { Image } from 'react-native';
+import { Image, View} from 'react-native';
 
 
 export default class Header extends Component {
 
     render() {
         return (
-            <Image style={{ width: 350, height: 150 }} source={require('../images/SleuthLogo.png')}/>
+            <View style={{alignItems: 'center', backgroundColor: "#282c34"}}>
+                <Image style={{ width: 350, height: 150 }} source={require('../images/SleuthLogo.png')} />
+            </View>
         );
     }
 }

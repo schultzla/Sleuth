@@ -20,7 +20,7 @@ export default class Submission extends Component {
   render() {
     return (
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <View style={this.props.viewStyle}>
+        <View style={styles.view}>
           <TextInput
             style={{ color: "#ffffff", marginTop: '5%', padding: 5, height: 40, width: '85%', textAlign: "left", borderRadius: 5 }}
             backgroundColor="#333940"
@@ -179,5 +179,14 @@ const styles = StyleSheet.create({
     padding: 10,
     width: '85%',
     borderRadius: 5
+  }, 
+  view: {
+    flex: 1,
+    width: '100%',
+    alignItems: 'center',
+    backgroundColor: '#282c34'
+  },
+  nav: {
+    width: '100%'
   }
 })
