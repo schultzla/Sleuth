@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./images/SleuthLogo.png" width="300"/>
+  <img src="./images/SleuthLogo.png" width="500"/>
 </p>
 
 <p align="center">
