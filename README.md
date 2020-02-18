@@ -10,3 +10,4 @@
 ### What's This?
 
 This is the mobile app version of <a href="https://anon.logamos.pw">AnonyBoard</a> (built using React Native). Includes all of the features present at <a href="https://anon.logamos.pw">AnonyBoard</a>, but in a clean, compact mobile app.
+2
