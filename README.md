@@ -1,8 +1,8 @@
-# Sleuth
+<p float="center">
+  <img src="./images/SleuthLogo.png"/>
+</p>
 
-React Native app version of AnonyBoard
-
-<p float="left">
+<p float="center">
   <img src="./images/feed.png" width="300" />
   <img src="./images/post.png" width="300" /> 
 </p>
