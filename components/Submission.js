@@ -22,7 +22,7 @@ export default class Submission extends Component {
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.view}>
           <TextInput
-            style={{ color: "#ffffff", marginTop: '5%', padding: 5, height: 40, width: '85%', textAlign: "left", borderRadius: 5 }}
+            style={{ color: "#ffffff", marginTop: '5%', padding: 5, height: 40, width: '95%', textAlign: "left", borderRadius: 5 }}
             backgroundColor="#333940"
             placeholderTextColor="#6C757D"
             placeholder="Username (Optional)"
@@ -34,7 +34,7 @@ export default class Submission extends Component {
           />
 
           <TextInput
-            style={{ color: "#ffffff", padding: 5, width: '85%', textAlign: "left", borderRadius: 5, marginVertical: 10, height: 150 }}
+            style={{ color: "#ffffff", padding: 5, width: '95%', textAlign: "left", borderRadius: 5, marginVertical: 10, height: 150 }}
             multiline={true}
             placeholderTextColor="#6C757D"
             backgroundColor="#333940"
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#FFC106',
     padding: 10,
-    width: '85%',
+    width: '95%',
     borderRadius: 5
   }, 
   view: {
