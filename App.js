@@ -11,6 +11,7 @@ import Submission from './components/Submission';
 import Header from './components/Header';
 import NavBar from './components/NavBar';
 import { navigationRef } from './components/RootNavigation';
+import DetailedMessage from './components/DetailedMessage';
 
 library.add(faUserSecret, faEdit, faComments, faComment)
 
@@ -29,7 +30,8 @@ export default class App extends Component {
           <Stack.Screen name="Feed" component={Feed}/>
           <Stack.Screen name='Post' component={Submission} options={{
             gestureEnabled: false
-          }}/>
+          }} />
+          <Stack.Screen name='Reply' component={DetailedMessage}/>
         </Stack.Navigator>
 
         <NavBar />
