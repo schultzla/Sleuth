@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import Message from './Message'
 import Replies from './Replies'
+import ReplySubmission from "./ReplySubmission";
 
 export default class DetailedMessage extends Component {
 
@@ -12,13 +13,15 @@ export default class DetailedMessage extends Component {
 
   render() {
     return (
-      <View style={styles.view}>
-        <View style={{flex: 1, width: '100%', marginTop: '5%'}}>
-          <Message clickable={false} item={this.props.route.params.item} />
-          
-          <Replies item={this.props.route.params.item} style={{ flex: 1, width: '100%', marginTop: '5%' }}/>
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+        <View style={styles.view}>
+          <View style={{ flex: 1, width: '100%'}}>
+            <Message clickable={false} item={this.props.route.params.item} />
+            <ReplySubmission item={this.props.route.params.item} />
+            <Replies item={this.props.route.params.item} style={{ flex: 1, width: '100%' }} />
+          </View>
         </View>
-      </View>
+      </TouchableWithoutFeedback>
     )
   }
 }

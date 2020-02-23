@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {TouchableOpacity, View, Text, StyleSheet} from 'react-native'
+import {TouchableOpacity, View, Text, StyleSheet, Keyboard} from 'react-native'
 import moment from 'moment';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import * as RootNavigation from './RootNavigation.js';
@@ -13,7 +13,7 @@ export default class Message extends Component {
     return (
       <TouchableOpacity activeOpacity={this.props.clickable ? .7 : 1} onPress={() => this.props.clickable ? RootNavigation.navigate('Reply', {
         item: this.props.item
-      }) : false}>
+      }) : Keyboard.dismiss()}>
         <View style={styles.card}>
           <Text
             style={{

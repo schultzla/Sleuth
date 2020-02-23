@@ -1,7 +1,6 @@
 import 'react-native-gesture-handler';
 import React, { Component } from 'react';
 import { StyleSheet } from 'react-native'
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faEdit, faUserSecret, faComments, faComment } from '@fortawesome/free-solid-svg-icons'
 import { NavigationContainer } from '@react-navigation/native';
@@ -12,6 +11,8 @@ import Header from './components/Header';
 import NavBar from './components/NavBar';
 import { navigationRef } from './components/RootNavigation';
 import DetailedMessage from './components/DetailedMessage';
+import DropdownAlert from 'react-native-dropdownalert';
+import DropDown from './components/DropDown';
 
 library.add(faUserSecret, faEdit, faComments, faComment)
 
@@ -34,7 +35,9 @@ export default class App extends Component {
           <Stack.Screen name='Reply' component={DetailedMessage}/>
         </Stack.Navigator>
 
-        <NavBar />
+        <NavBar/>
+
+        <DropdownAlert ref={(ref) => DropDown.setDropDown(ref)} />
       </NavigationContainer>
     );
   }

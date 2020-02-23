@@ -3,8 +3,9 @@
 </p>
 
 <p align="center">
-  <img src="./images/feed.png" width="300" />
-  <img src="./images/post.png" width="300" /> 
+  <img src="./images/feed.png" width="200" />
+  <img src="./images/reply.png" width="200" />
+  <img src="./images/post.png" width="200" /> 
 </p>
 
 ### What's This?

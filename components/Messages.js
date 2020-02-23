@@ -13,6 +13,7 @@ export default class Messages extends Component {
     };
     
     this.getMessages = this.getMessages.bind(this);
+    this.listRef = React.createRef();
   }
 
   render() {
@@ -27,6 +28,7 @@ export default class Messages extends Component {
           showsVerticalScrollIndicator={false}
           refreshing={this.state.refreshing}
           onRefresh={this.getMessages}
+          ref={this.listRef}
         >
         </FlatList>
       </View>

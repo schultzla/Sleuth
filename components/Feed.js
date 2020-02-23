@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Animated } from 'react-native';
 import Messages from './Messages';
-import DropdownAlert from 'react-native-dropdownalert';
 
 
 export default class Feed extends Component {
@@ -18,8 +17,6 @@ export default class Feed extends Component {
       <View style={styles.view}>
 
         <Messages viewStyle={styles.view} />
-
-        <DropdownAlert ref={ref => this.dropDownAlertRef = ref} />
       </View>
     );
   }

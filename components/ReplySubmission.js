@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
-import { TouchableWithoutFeedback, Keyboard, Text, TextInput, View, StyleSheet, TouchableOpacity } from 'react-native';
-import Filter from 'bad-words';
+import React, { Component } from 'react'
+import { Keyboard, View, Text, TouchableWithoutFeedback, TouchableOpacity, StyleSheet, TextInput } from 'react-native'
 import DropDown from './DropDown'
+import Filter from 'bad-words';
 
-export default class Submission extends Component {
+export default class ReplySubmission extends Component {
   constructor(props) {
     super(props);
     this.state = {
       message: "",
       author: "",
-      messages: [],
       messageError: null,
       authorError: null,
       error: false
@@ -50,14 +49,49 @@ export default class Submission extends Component {
 
           <TouchableOpacity
             style={styles.button}
-            onPress={this.addMessage}
+            onPress={this.addReply}
           >
-            <Text> Submit </Text>
+            <Text> Reply </Text>
           </TouchableOpacity>
         </View>
       </TouchableWithoutFeedback>
     )
   }
+
+  addReply = () => {
+    Keyboard.dismiss();
+    var valMsg = this.validateMessage();
+    var valAuth = this.validateAuthor();
+    if (valMsg || valAuth) {
+      return;
+    }
+
+    var filter = new Filter();
+    fetch('https://anon.logamos.pw/api/v1/messages/replies/' + this.props.item._id, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message: filter.clean(this.state.message),
+        author: this.state.author === "" ? "Anonymous" : filter.clean(this.state.author)
+      })
+    })
+      .then(data => data.json())
+      .then(result => {
+        DropDown.dropDown.alertWithType('success', 'Posted', "Reply posted!");
+      })
+      .catch(error => {
+        console.log(error)
+        DropDown.dropDown.alertWithType('error', 'Error', error);
+      })
+    this.messageInput.current.clear();
+    this.authorInput.current.clear();
+    this.setState({
+      message: "",
+      author: "",
+      error: true
+    })
+  }
+
 
   validateAuthor = () => {
     const { author } = this.state;
@@ -173,6 +207,7 @@ export default class Submission extends Component {
 
 }
 
+
 const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
@@ -180,7 +215,7 @@ const styles = StyleSheet.create({
     padding: 10,
     width: '95%',
     borderRadius: 5
-  }, 
+  },
   view: {
     flex: 1,
     width: '100%',
