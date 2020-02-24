@@ -59,7 +59,7 @@ export default class Replies extends Component {
           data={this.state.replies}
           renderItem={({ item }) => <Reply item={item} />}
           keyExtractor={item => item._id}
-          style={{ width: '100%', marginTop: '5%' }}
+          style={{ width: '100%' }}
           showsVerticalScrollIndicator={false}
           refreshing={this.state.refreshing}
           onRefresh={() => {this.getReplies(true)}}
