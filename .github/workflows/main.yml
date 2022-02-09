@@ -20,11 +20,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: "Dumb Github Context"
-        env:
-          GITHUB_CONTEXT: ${{ toJSON(github) }}
-        run: echo "$GITHUB_CONTEXT"
-
       - name: "Remove Previous Docker Image"
         run: |
             if [ -z ${{ github.event.before }} ]; then
