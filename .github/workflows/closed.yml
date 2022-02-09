@@ -1,0 +1,16 @@
+name: "Pull Request Closed"
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+jobs:
+  dump-context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump Github Context
+      env: 
+        GITHUB_CONTEXT: ${{ toJSON(github) }}
+       run: echo "$GITHUB_CONTEXT"
+   
