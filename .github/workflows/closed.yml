@@ -23,10 +23,10 @@ jobs:
     
       - name: "Remove Previous Docker Image"
         run: |
-            if [ -z ${{ github.event.before }} ]; then
+            if [ -z ${{ github.event.pull_request.head.sha }} ]; then
               echo "First commit, no previous image to remove"
             else
-              echo ${{ github.event.before }}
+              echo ${{ github.event.pull_request.head.sha }}
             fi
       - name: "Show Github Context"
         env:
