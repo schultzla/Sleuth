@@ -27,8 +27,8 @@ jobs:
 
       - name: "Remove Previous Docker Image"
         run: |
-            if [ -z ${{ github.event.pull_request.merge_commit_sha }} ]; then
+            if [ -z ${{ github.event.before }} ]; then
               echo "First commit, no previous image to remove"
             else
-              echo ${{ github.event.pull_request.merge_commit_sha }}
+              echo ${{ github.event.before }}
             fi
