@@ -3,6 +3,7 @@ on:
   release:
     types:
       - published
+      - edited
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -13,5 +14,7 @@ jobs:
         run: echo "RELEASE_VERSION=$(${{ github.event.release.tag_name }} | cut -c 2- )" >> $GITHUB_ENV
       - name: "Output 2"
         run: echo ${{ env.RELEASE_VERSION }}
-      - name: "Output 3"
+      - name: "not a pre release check"
         run: echo ${{ github.event.release.prerelease }}
+      - name: "edited release check"
+        run: echo ${{ github.event.release.tag_name }}
