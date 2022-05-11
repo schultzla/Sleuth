@@ -3,6 +3,7 @@ on:
   release:
     types:
       - released
+      - edited
 jobs:
   deploy:
     runs-on: ubuntu-latest
