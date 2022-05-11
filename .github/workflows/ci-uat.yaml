@@ -2,7 +2,7 @@ name: "Test Release Actions"
 on:
   release:
     types:
-      - published
+      - prereleased
 jobs:
   deploy:
     runs-on: ubuntu-latest
