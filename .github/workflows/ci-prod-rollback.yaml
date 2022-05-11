@@ -26,4 +26,5 @@ jobs:
       - name: "print latest release"
         run: echo ${{ env.LATEST_RELEASE }}
       - name: "add rollback text"
-        run: gh api --method PATCH -H "Accept: application/vnd.github.v3+json" /repoes/schultzla/Sleuth/releases/${{ env.LATEST_RELEASE }} -f name="${{ env.LATEST_NAME }} - Rollback"
+        run: |
+          gh api --method PATCH -H "Accept: application/vnd.github.v3+json" /repos/schultzla/Sleuth/releases/${{ env.LATEST_RELEASE }} -f name="${env.LATEST_NAME} - Rollback"
