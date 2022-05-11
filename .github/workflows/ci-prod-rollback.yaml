@@ -1,0 +1,29 @@
+name: "Rollback Release Actions"
+on:
+  release:
+    types:
+      - deleted
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout Repo"
+        uses: actions/checkout@v2
+      - name: "filter out prereleases"
+        run: echo ${{ github.event.release.prerelease }}
+      - name: "filter out drafts"
+        run: echo ${{ github.evetn.release.draft }}
+      - name: "deleted version check"
+        run: echo ${{ github.event.release.tag_name }}
+      - name: "get latest release check"
+        run: |
+          latest_release="$(gh api -H "Accept: application/vnd.github.v3+json" /repos/schultzla/Sleuth/releases/latest | jq -r '.tag_name' )"
+          release_name="$(gh api -H "Accept: application/vnd.github.v3+json" /repos/schultzla/Sleuth/releases/latest | jq -r '.name' )" 
+          echo 'LATEST_RELEASE='$latest_release >> $GITHUB_ENV
+          echo 'LATEST_NAME='$release_name >> $GITHUB_ENV
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: "print latest release"
+        run: echo ${{ env.LATEST_RELEASE }}
+      - name: "add rollback text"
+        run: gh api --method PATCH -H "Accept: application/vnd.github.v3+json" /repoes/schultzla/Sleuth/releases/${{ env.LATEST_RELEASE }} -f name="${{ env.LATEST_NAME }} - Rollback"
