@@ -2,7 +2,7 @@ name: "Test Release Actions"
 on:
   release:
     types:
-      - created
+      - published
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -10,8 +10,8 @@ jobs:
       - name: "Checkout Repo"
         uses: actions/checkout@v2
       - name: "Output"
-        run: git describe --tags
+        run: echo "RELEASE_VERSION=$(${{ github.event.release.tag_name }} | cut -c 2- )" >> $GITHUB_ENV
       - name: "Output 2"
-        run: echo ${{ github.event.release.draft }}
+        run: echo ${{ env.RELEASE_VERSION }}
       - name: "Output 3"
-        run: echo ${{ github.event.release }}
+        run: echo ${{ github.event.release.prerelease }}
