@@ -13,6 +13,7 @@ jobs:
         run: |
           release_ver=${{ github.event.release.tag_name }}
           echo 'RELEASE_VERSION='${release_ver:1} >> $GITHUB_ENV
+          echo ${{ env.RELEASE_VERSION }}
       - name: "filter out prereleases"
         run: echo ${{ github.event.release.prerelease }}
       - name: "filter out drafts"
