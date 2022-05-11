@@ -28,3 +28,5 @@ jobs:
       - name: "add rollback text"
         run: |
           gh api --method PATCH -H "Accept: application/vnd.github.v3+json" /repos/schultzla/Sleuth/releases/${{ env.LATEST_RELEASE }} -f name="${{ env.LATEST_NAME }} - Rollback"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
