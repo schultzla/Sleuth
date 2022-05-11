@@ -1,0 +1,13 @@
+name: "Test Release Actions"
+on:
+  release:
+    types:
+      - published
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Output"
+      run: git describe --tags
+      - name: "Output 2"
+      run: echo ${{ github.event.release.draft }}
