@@ -7,8 +7,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: "Checkout Repo"
+        uses: actions/checkout@v2
       - name: "Output"
         run: git describe --tags
       - name: "Output 2"
         run: echo ${{ github.event.release.draft }}
+      - name: "Output 3"
+        run: echo ${{ github.event.release }}
