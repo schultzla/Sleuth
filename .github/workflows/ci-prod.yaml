@@ -2,8 +2,7 @@ name: "Test Release Actions"
 on:
   release:
     types:
-      - published
-      - edited
+      - released
 jobs:
   deploy:
     runs-on: ubuntu-latest
