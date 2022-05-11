@@ -1,4 +1,4 @@
-name: "Test Release Actions"
+name: "Deploy UAT"
 on:
   release:
     types:
